@@ -28,15 +28,28 @@
 }
 .hotel-view {
     height: 80rem;
-    background-color: var(--color-white);
+    background-color: var(--color-grey-light-2);
     flex: 1;
-    &__images {
-        display: flex;
-        flex-direction: row;
+}
 
-        &--hotel {
-            width: calc(100%/3);
-        }
-    }
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+.overview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-white);
+}
 
+.btn-inline {
+    
+    border: none;
+    border-bottom: 1px solid var(--color-primary);
+    padding-bottom: 4px;
+    color: var(--color-primary);
+    background-color: transparent;
+    cursor:pointer;
+    
 }
