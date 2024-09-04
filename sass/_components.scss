@@ -119,9 +119,7 @@
 
     &__item {
         position: relative;
-        font-weight: 400;
         font-family: inherit;
-        padding: 1rem 0;
         text-align: start;
 
         &:not(:last-child) {
@@ -160,8 +158,8 @@
   
 
     &__icon {
-        height: 2rem;
-        width: 2rem;
+        height: 1.75rem;
+        width: 1.75rem;
         fill: var(--color-grey-light-1);
         margin-right: 2rem;
     }

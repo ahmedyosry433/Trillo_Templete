@@ -120,9 +120,7 @@
   width: 100%; }
   .side-nav__item {
     position: relative;
-    font-weight: 400;
     font-family: inherit;
-    padding: 1rem 0;
     text-align: start; }
     .side-nav__item:not(:last-child) {
       margin-bottom: 0.5rem; }
@@ -145,8 +143,8 @@
       width: 100%;
       transform: scaleY(1); }
   .side-nav__icon {
-    height: 2rem;
-    width: 2rem;
+    height: 1.75rem;
+    width: 1.75rem;
     fill: var(--color-grey-light-1);
     margin-right: 2rem; }
   .side-nav__link:link, .side-nav__link:visited {
