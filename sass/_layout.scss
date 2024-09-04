@@ -10,17 +10,11 @@
     height: 7rem;
     background-color: var(--color-white);
     border-bottom: var(--color-grey-light-2) ;
-    
-    &__logo-box {
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-    }
-    &__logo {
-        align-self: center;
-        height: 4rem;
-    }
 
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .content {
     display: flex;
