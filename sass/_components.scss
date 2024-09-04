@@ -10,39 +10,47 @@
 
     display: flex;
     flex: 0 0 40%;
-    background-color: var(--color-grey-light-2);
-    border-radius: 10rem;
-    justify-content: space-between;
-    align-items:center ;
-    width: 80%;
-    padding: 0.7rem 2rem;
-
+    justify-content: center;
+    
     &__input {
-        margin-right: -3.25rem;
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        background-color: var(--color-grey-light-2);
         border: none;
+        padding: 0.7rem 2rem;
+        border-radius: 10rem;
         width: 90%;
-        background-color: transparent;
-        // &:focus {
-        //     outline: none;
-        //     width: 100%;            
-        // }
+        transition: all 0.3s;
+        margin-right: -3.25rem;
+
+        &:focus {
+            background-color: var(--color-grey-light-3);
+            outline: none;
+            width: 100%;            
+        }
+
+        &::-webkit-input-placeholder {
+            font-weight: 100;
+            color: var(--color-grey-light-4);
+        }
     }
 
     &__button {
         border: none;
-        &:link,
-        &:active{
-            
-            transform: translateX(3deg);
-
+        background-color: var(--color-grey-light-2);
+        &:active {
+            outline: none;
+            transform: scale(1.1);
         }
-        
+        &:focus {
+            outline: none;
+        }
     }
     &__icon {
-        align-self:flex-end ;
         height: 2rem;
         width: 2rem;
-        
+        fill:var(--color-grey-dark-3) ;
     }
 }
 
@@ -52,48 +60,131 @@
 
 .user-nav {
     display: flex;
+    align-self: stretch;
     justify-content: center;
-    align-items: center;
+    & > * {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 0 2rem;
+        cursor: pointer;
+    }
+    & > *:hover {
+        background-color: var(--color-grey-light-2);
+    }
     &__icon-box {
         position: relative;
-        margin-right: 3rem;
-        height: 100%;
-        &:hover {
-            background-color: red;
-        }
     }
 
     &__icon { 
         height: 3rem;
         width: 3rem;
+        fill: var(--color-grey-dark-2);
     }
 
     &__notification {
         position: absolute;
-        top: 0;
-        right: 0;
-        background-color: red;
+        top: 1rem;
+        right: 1.5rem;
+        font-size: 1rem;
+        background-color: var(--color-primary);
         border-radius: 50%;
-        height: 1.5rem;
-        width: 1.5rem;
+        height: 2rem;
+        width: 2rem;
         display: flex;
         justify-content: center;
         align-items: center;
         color: var(--color-white);
     }
 
-    &__user {}
-
     &__user-photo {
         width: 4rem;
         height: 4rem;
         border-radius: 50%;
         object-fit: cover;
-        margin-right: 0.5rem;
+        margin-right: 1rem;
     }
 
-    &__user-name {
-        font-size: 1.2rem;
-       margin-right: 2rem;
+    
+}
+
+//////////////////////////////////////////////////
+/// SIDEBAR
+
+.side-nav {
+    font-size: 1.4rem ;
+    list-style: none;
+    margin-top: 3.5rem;
+    width: 100%;
+
+    &__item {
+        position: relative;
+        font-weight: 400;
+        font-family: inherit;
+        padding: 1rem 0;
+        text-align: start;
+
+        &:not(:last-child) {
+            margin-bottom: 0.5rem;
+        }
+    
+        &--active {
+            background-color: var(--color-primary);
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 3px;
+            background-color: var(--color-primary);
+            transition: transform 0.2s, width 0.4s cubic-bezier(1,0,0,1)  0.2s, background-color 0.2s;
+            transform-origin: bottom;
+            transform: scaleY(0);
+
+            
+        }
+        &:active::before {
+            background-color: var(--color-primary-light);
+        }
+        
+        &:hover::before,
+        &--active::before {
+            width: 100%;
+            transform: scaleY(1);
+        }
+       
     }
+  
+
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+        fill: var(--color-grey-light-1);
+        margin-right: 2rem;
+    }
+    &__link {
+        
+        &:link,
+        &:visited {  
+
+        text-decoration: none;
+        color: var(--color-grey-light-1);
+        text-transform: uppercase;
+        display: block;
+        padding: 1.5rem 3rem;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+
+        }
+    }
+}
+.legal {
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--color-grey-light-4);
+    padding: 2.5rem;
 }
