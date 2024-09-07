@@ -57,6 +57,14 @@
   flex-direction: column;
   align-items: center; }
 
+.cta {
+  padding: 4rem 0;
+  color: var(--color-grey-dark-3);
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 100; }
+
 .logo {
   margin-left: 2rem;
   height: 3.25rem; }
@@ -343,6 +351,44 @@
     color: var(--color-primary);
     font-size: 2.2rem;
     font-weight: 300; }
+
+.cta__heading {
+  margin-bottom: 4rem; }
+
+.btn {
+  font-size: 1.5rem;
+  border: none;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+  color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer; }
+  .btn > * {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    -webkit-transition: all .2s;
+    transition: all .2s; }
+  .btn-visible {
+    padding: 2rem 7.5rem; }
+  .btn-invisible {
+    position: absolute;
+    padding: 2rem 0;
+    left: 0;
+    top: -100%;
+    transition: all 0.2s; }
+  .btn:focus {
+    outline: none;
+    animation: pulsate 1s infinite; }
+  .btn:hover {
+    background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark)); }
+  .btn:hover .btn-visible {
+    transform: translateY(100%); }
+  .btn:hover .btn-invisible {
+    top: 0; }
 
 :root {
   --color-primary:#eb2f64;

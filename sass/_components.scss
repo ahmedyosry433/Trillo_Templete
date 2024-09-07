@@ -423,3 +423,60 @@
         font-weight: 300;
     }
 }
+
+
+
+
+/////////////////////////////////////////////////////////
+/// CTA Section 
+/// 
+.cta__heading {
+    margin-bottom: 4rem;
+}
+.btn {
+    font-size: 1.5rem;
+    border: none;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-radius: 100px;
+    background-image: linear-gradient(to right , var(--color-primary-light), var(--color-primary-dark));
+    color: var(--color-white);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    & > * {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        -webkit-transition: all .2s;
+        transition: all .2s;
+    }
+    &-visible {
+        padding: 2rem 7.5rem; 
+    }
+
+    &-invisible {
+        position: absolute;
+        padding: 2rem 0;
+        left: 0;
+        top: -100%;
+        transition: all 0.2s;
+    }
+
+    
+    &:focus {
+        outline: none;
+        animation: pulsate 1s infinite  ;
+    }
+    &:hover {
+        background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+        
+    }
+    &:hover &-visible{
+       transform: translateY(100%);
+    }
+    &:hover &-invisible {
+        top: 0;
+    }
+}
