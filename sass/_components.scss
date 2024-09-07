@@ -254,10 +254,18 @@
     background-color: transparent;
     display: inline-block;
     cursor:pointer;
-    transition: all 0.3s;
-    &:hover {
+    transition: all 0.2s;
+    & span {
+        margin-left: 0.5rem;
+        transition: margin-left 0.3s;
+    }
+    &:hover  {
         color: var(--color-grey-dark-1);
         border-bottom: 2px solid var(--color-grey-dark-2);
+        & span {
+            margin-left: 1rem;
+
+        }
     }
     &:focus {
         outline: none;
@@ -380,7 +388,8 @@
     }
     &__paragragh {
         margin-bottom: 2rem;
-        z-index: -1;
+        z-index: 10;
+        position: relative;
     }
     &__info {
         margin-right: auto;

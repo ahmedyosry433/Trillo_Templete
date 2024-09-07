@@ -52,7 +52,10 @@
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.06); }
 
 .user-reviews {
-  flex: 1; }
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 .logo {
   margin-left: 2rem;
@@ -229,10 +232,15 @@
   background-color: transparent;
   display: inline-block;
   cursor: pointer;
-  transition: all 0.3s; }
+  transition: all 0.2s; }
+  .btn-inline span {
+    margin-left: 0.5rem;
+    transition: margin-left 0.3s; }
   .btn-inline:hover {
     color: var(--color-grey-dark-1);
     border-bottom: 2px solid var(--color-grey-dark-2); }
+    .btn-inline:hover span {
+      margin-left: 1rem; }
   .btn-inline:focus {
     outline: none;
     animation: pulsate 1s infinite; }
@@ -311,7 +319,8 @@
     margin-bottom: 3rem; }
   .review__paragragh {
     margin-bottom: 2rem;
-    z-index: -1; }
+    z-index: 10;
+    position: relative; }
   .review__info {
     margin-right: auto; }
   .review__user {
