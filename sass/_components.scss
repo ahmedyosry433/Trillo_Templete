@@ -72,8 +72,8 @@
     & > *:hover {
         background-color: var(--color-grey-light-2);
     }
-    position: relative;
     &__icon-box {
+        position: relative;
     }
 
     &__icon { 
