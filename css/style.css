@@ -41,6 +41,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between; }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      flex-wrap: wrap;
+      height: 11rem;
+      align-content: space-around; } }
 
 .sidebar {
   display: flex;
@@ -52,10 +57,7 @@
   flex: 0 0 18%; }
   @media only screen and (max-width: 56.25em) {
     .sidebar {
-      flex-direction: row;
-      align-items: flex-start;
-      flex: 0 0 100%;
-      justify-content: flex-start; } }
+      flex-direction: row; } }
 
 .hotel-view {
   background-color: var(--color-white);
@@ -76,6 +78,10 @@
   @media only screen and (max-width: 56.25em) {
     .detail {
       padding: 2rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .detail {
+      flex-direction: column;
+      padding: 2rem; } }
 
 .description {
   font-size: 1.4rem;
@@ -84,6 +90,11 @@
   margin-right: 4.5rem;
   padding: 3rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.06); }
+  @media only screen and (max-width: 37.5em) {
+    .description {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 2rem; } }
   @media only screen and (max-width: 56.25em) {
     .description {
       margin-right: 3rem;
@@ -94,6 +105,10 @@
   display: flex;
   flex-direction: column;
   align-items: center; }
+  @media only screen and (max-width: 37.5em) {
+    .user-reviews {
+      align-items: stretch;
+      width: 100%; } }
 
 .cta {
   padding: 4rem 0;
@@ -106,11 +121,20 @@
 .logo {
   margin-left: 2rem;
   height: 3.25rem; }
+  @media only screen and (max-width: 37.5em) {
+    .logo {
+      margin-left: 0.5rem; } }
 
 .search {
   display: flex;
   flex: 0 0 40%;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center; }
+  @media only screen and (max-width: 37.5em) {
+    .search {
+      order: 1;
+      flex: 0 0 100%;
+      background-color: var(--color-grey-light-2); } }
   .search__input {
     font-family: inherit;
     font-size: inherit;
@@ -185,6 +209,9 @@
   list-style: none;
   margin-top: 3.5rem;
   width: 100%; }
+  @media only screen and (max-width: 37.5em) {
+    .side-nav {
+      font-size: 1rem; } }
   @media only screen and (max-width: 56.25em) {
     .side-nav {
       display: flex;
@@ -226,15 +253,25 @@
     width: 1.75rem;
     fill: var(--color-grey-light-1);
     margin-right: 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .side-nav__icon {
+        margin: 0;
+        margin-bottom: 0.5rem;
+        width: 1.5rem;
+        height: 1.5rem; } }
   .side-nav__link:link, .side-nav__link:visited {
     text-decoration: none;
     color: var(--color-grey-light-1);
     text-transform: uppercase;
-    display: block;
+    display: flex;
     padding: 1.5rem 3rem;
     align-items: center;
     position: relative;
     z-index: 10; }
+    @media only screen and (max-width: 37.5em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        padding: 1.5rem 0.5rem;
+        flex-direction: column; } }
 
 .legal {
   font-size: 1.2rem;
@@ -258,6 +295,10 @@
   color: var(--color-grey-dark-2);
   text-transform: uppercase;
   padding: 1.5rem 3rem; }
+  @media only screen and (max-width: 37.5em) {
+    .overview__heading {
+      font-size: 1.5rem;
+      padding: 1rem; } }
 
 .overview__stars {
   margin-right: auto;
@@ -267,6 +308,10 @@
   height: 2rem;
   width: 2rem;
   fill: var(--color-primary); }
+  @media only screen and (max-width: 37.5em) {
+    .overview__star, .overview__location-icon {
+      height: 1.5rem;
+      width: 1.5rem; } }
 
 .overview__location {
   display: flex;
@@ -280,11 +325,20 @@
   flex-direction: column;
   padding: 0 1.5rem;
   color: var(--color-white); }
+  @media only screen and (max-width: 37.5em) {
+    .overview__rating {
+      padding: 0 1rem; } }
   .overview__rating-number {
     font-size: 3rem;
     font-weight: 300; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__rating-number {
+        font-size: 2rem; } }
   .overview__rating-text {
     text-transform: uppercase; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__rating-text {
+        font-size: 1rem; } }
 
 .btn-inline {
   border: none;
@@ -294,7 +348,11 @@
   background-color: transparent;
   display: inline-block;
   cursor: pointer;
-  transition: all 0.2s; }
+  transition: all 0.2s;
+  align-self: center; }
+  @media only screen and (max-width: 37.5em) {
+    .btn-inline {
+      font-size: 1.3rem; } }
   .btn-inline span {
     margin-left: 0.5rem;
     transition: margin-left 0.3s; }

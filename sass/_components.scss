@@ -3,6 +3,10 @@
 .logo {
     margin-left: 2rem;
     height: 3.25rem;
+    @include respond(phone){
+        margin-left: 0.5rem;
+    
+    }
 }
 //////////////////////////////////////////////////
 /// SEARCH BOX
@@ -11,6 +15,14 @@
     display: flex;
     flex: 0 0 40%;
     justify-content: center;
+    align-items: center;
+    
+    @include respond(phone){
+        order: 1;
+        flex: 0 0 100%;
+        background-color: var(--color-grey-light-2);
+
+    }
     
     &__input {
         font-family: inherit;
@@ -117,6 +129,9 @@
     list-style: none;
     margin-top: 3.5rem;
     width: 100%;
+    @include respond(phone){
+        font-size: 1rem;
+    }
     
     @include respond(tab-port){
         display: flex;
@@ -184,6 +199,12 @@
         width: 1.75rem;
         fill: var(--color-grey-light-1);
         margin-right: 2rem;
+        @include respond(phone){
+            margin: 0;
+            margin-bottom: 0.5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
     }
     &__link {
         
@@ -193,11 +214,15 @@
         text-decoration: none;
         color: var(--color-grey-light-1);
         text-transform: uppercase;
-        display: block;
+        display: flex;
         padding: 1.5rem 3rem;
         align-items: center;
         position: relative;
         z-index: 10;
+        @include respond(phone){
+            padding: 1.5rem 0.5rem;
+            flex-direction: column;
+        }
 
         }
     }
@@ -234,6 +259,12 @@
         color: var(--color-grey-dark-2);
         text-transform: uppercase;
         padding: 1.5rem 3rem;
+        
+        @include respond(phone){
+            font-size: 1.5rem;
+            
+            padding: 1rem;
+        }
     }
     &__stars {
         margin-right: auto;
@@ -245,6 +276,11 @@
         height: 2rem;
         width: 2rem;
         fill: var(--color-primary);
+        @include respond(phone){
+            
+            height: 1.5rem;
+            width: 1.5rem;
+        }
     }
     &__location {
         display: flex;
@@ -261,12 +297,25 @@
         flex-direction: column;     
         padding: 0 1.5rem;
         color: var(--color-white);
+        @include respond(phone){
+            padding: 0 1rem;
+            
+        }
+
         &-number {
             font-size: 3rem;
             font-weight: 300;
+            @include respond(phone){
+                font-size: 2rem;
+    
+            }
         }
         &-text {
             text-transform: uppercase;
+            @include respond(phone){
+                font-size: 1rem;
+    
+            }
         }
     }
 }
@@ -280,6 +329,12 @@
     display: inline-block;
     cursor:pointer;
     transition: all 0.2s;
+    align-self: center;
+
+    @include respond(phone){
+        font-size: 1.3rem;
+    }
+
     & span {
         margin-left: 0.5rem;
         transition: margin-left 0.3s;
